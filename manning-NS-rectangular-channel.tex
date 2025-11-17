@@ -161,6 +161,8 @@ With boundary conditions:
     \item Symmetry at the free surface: $\frac{\partial u}{\partial y} = 0$ at $y = h$.
 \end{itemize}
 
+\subsection*{Flow Rate Calculations}
+
 Next we non-dimensionalize the equations using the following variables:
 \begin{equation}
     \hat{y} = \frac{y}{h}, \quad \hat{z} = \frac{z}{b}, \quad \hat{u} = \frac{u \nu}{h^2 g \sin \theta}
@@ -168,20 +170,27 @@ Next we non-dimensionalize the equations using the following variables:
 where $\theta$ is the angle of the channel slope.
 Substituting these into the simplified Navier-Stokes equation, we obtain the non-dimensional form:
 \begin{equation}
-    -1 = \frac{\partial^2 \hat{u}}{\partial \hat{y}^2} + \left( \frac{h^2}{b^2} \right) \frac{\partial^2 \hat{u}}{\partial \hat{z}^2}
+    -1 = \frac{\partial^2 \hat{u}}{\partial \hat{y}^2} + \alpha^2 \frac{\partial^2 \hat{u}}{\partial \hat{z}^2}
 \end{equation}
-We solve this equation using separation of variables and apply the boundary conditions to find the velocity profile $\hat{u}(\hat{y}, \hat{z})$.
-Once we have the velocity profile, we calculate the volumetric flow rate $Q$ by integrating the velocity over the cross-sectional area:
+where $\alpha = \frac{h}{b}$ is the aspect ratio of the channel.
+
+We solve this equation using separation of variables and apply the boundary conditions to find the velocity profile
+\begin{equation}
+    \hat{u}(\hat{y}, \hat{z}) = \hat{y} - \frac{\hat{y}^2}{2} + \sum_{1}^{\infty}A_n\sin(\lambda_n \hat{y})\cosh(\frac{\lambda_n}{\alpha}(\hat{z}-\frac{1}{2}))
+\end{equation}
+where $A_n = \frac{-2}{\lambda_n^3 \cosh(\frac{\lambda_n}{2\alpha})}$.
+
+The volumetric flow rate $Q$ is calculated by integrating the velocity profile over the cross-sectional area:
 \begin{equation}
     Q = \int_0^b \int_0^h u(y, z) \, dy \, dz
 \end{equation}
 
-\subsection*{Flow Rate Calculations}
-The final form of the volumetric flow rate $Q$ derived from the Navier-Stokes solution is:
+We are left with a final expression for $Q$ in terms of channel dimensions and fluid properties:
+
 \begin{equation}
-    Q = \frac{g \sin \theta h^3 b}{\nu} \left( \frac{1}{3} + \sum_{n=1}^{\infty} \frac{E_n}{\lambda_n^2} \left( 1 - \frac{\sinh(\lambda_n)}{\lambda_n \cosh(\lambda_n)} \right) \right)
+    Q = (\frac{h^3 b g \sin \theta}{\nu}) \left( \frac{1}{3} - \frac{4h}{b} \sum_{n=1}^{\infty} \frac{1}{\lambda_n^5} \tanh(\frac{\lambda_n b}{2h}) \right)
 \end{equation}
-where $\lambda_n = \frac{n \pi h}{b}$ and $E_n$ are constants determined by the boundary conditions.
+
 
 Manning's equation for volumetric flow rate in a rectangular channel is given by:
 \begin{equation}
@@ -189,8 +198,9 @@ Manning's equation for volumetric flow rate in a rectangular channel is given by
 \end{equation}
 Substituting the expressions for $A$ and $R_H$ for a rectangular channel, we have:
 \begin{equation}
-    Q = \frac{1}{n} (b h) \left( \frac{b h}{b + 2h} \right)^{2/3} S^{1/2}
+    Q = \frac{1}{n} {(b h)} \left( \frac{b h}{b + 2h} \right)^{2/3} S^{1/2}
 \end{equation}
+
 We calculate the flow rate using both the Navier-Stokes derived equation and Manning's equation for various channel dimensions and slopes under laminar flow conditions.
 
 
@@ -257,14 +267,14 @@ Finally, we compare this flow rate with that predicted by Manning's equation to 
 Put conclusions here.
 
 \section*{Acknowledgements}
-The authors would like to acknowledge Dr. Vladimir P. Soloviev for his guidance and support in teaching the ME 505 course on Applied Engineering Mathematics.
+The authors would like to acknowledge Dr.\ Vladimir P. Soloviev for his guidance and support in teaching the ME 505 course on Applied Engineering Mathematics.
 His patience and expertise were invaluable in guiding our understanding the fundamental concepts of differential equations and the solution methods we employed in this paper.
-The authors would also like to thank Dr. Julie Crockett for her assistance in understanding the fundamental principles of physics used to derive the Navier-Stokes equations.
+The authors would also like to thank Dr.\ Julie Crockett for her assistance in understanding the fundamental principles of physics used to derive the Navier-Stokes equations.
 Her teachings inspired the initial research question that led to this study. 
 
 % The bibliography is automatically generated from template.bib. Rename template.bib to match this file's name, if you change it. This will require an installation of Biber, which you should not install by hand; you run Latex on this document, then Biber on the shared name (e.g. "template"), then Latex again.
 % The names you give in the template.bib file become the names you can cite in this document.
-\printbibliography
+\printbibliography{}
 
 \section*{Appendix}
 Put appendix here.

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  17 NOV 2025 09:08
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  17 NOV 2025 11:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -570,7 +570,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--100
 
 
 [2]
-Underfull \hbox (badness 1231) in paragraph at lines 193--195
+Underfull \hbox (badness 1231) in paragraph at lines 204--205
 \TU/TimesNewRoman(0)/m/n/10 derived equation and Manning’s equation for various
  []
 
@@ -598,10 +598,10 @@ Package logreq Info: Writing requests to 'manning-NS-rectangular-channel.run.xml
 Here is how much of TeX's memory you used:
  13631 strings out of 473832
  299643 string characters out of 5729482
- 1262043 words of memory out of 5000000
+ 1263043 words of memory out of 5000000
  36547 multiletter control sequences out of 15000+600000
  560792 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  79i,13n,94p,760b,4675s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on manning-NS-rectangular-channel.xdv (4 pages, 88556 bytes).
+Output written on manning-NS-rectangular-channel.xdv (4 pages, 89084 bytes).
