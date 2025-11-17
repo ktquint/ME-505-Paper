@@ -1,8 +1,8 @@
-PWD /Users/kennyquintana/Library/CloudStorage/OneDrive-BrighamYoungUniversity/ME EN/ME EN 505/ME-505-Paper
+PWD /Users/kennyquintana/Github/ME-505-Paper
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/xetex/xelatex.fmt
-INPUT manning-NS-rectangular-channel.tex
+INPUT /Users/kennyquintana/Github/ME-505-Paper/manning-NS-rectangular-channel.tex
 OUTPUT manning-NS-rectangular-channel.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
