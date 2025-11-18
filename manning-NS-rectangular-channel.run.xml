@@ -80,7 +80,7 @@
       <file>manning-NS-rectangular-channel.bcf</file>
     </requires>
     <requires type="editable">
-      <file>template.bib</file>
+      <file>manning-NS-rectangular-channel.bib</file>
     </requires>
   </external>
 </requests>

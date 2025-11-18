@@ -147,6 +147,9 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 OUTPUT manning-NS-rectangular-channel.xdv
+INPUT ./3d-profile.png
+INPUT ./3d-profile.png
+INPUT ./3d-profile.png
 INPUT manning-NS-rectangular-channel.aux
 INPUT manning-NS-rectangular-channel.run.xml
 OUTPUT manning-NS-rectangular-channel.run.xml
