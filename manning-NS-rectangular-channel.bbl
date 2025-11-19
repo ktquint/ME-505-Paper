@@ -16,39 +16,5 @@
   {}
 \endgroup
 
-
-\refsection{0}
-  \datalist[entry]{nty/global//global/global/global}
-    \entry{textbook}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=d8986880ce30c45fc26bf3af70ef1c37}{%
-           family={Bergman},
-           familyi={B\bibinitperiod},
-           given={Theodore\bibnamedelima L.},
-           giveni={T\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=b22ea78229af4420d0683e5c6d56ef10}{%
-           family={Lavine},
-           familyi={L\bibinitperiod},
-           given={Adrienne\bibnamedelima S.},
-           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-      }
-      \strng{namehash}{91d3d0b1139ce543957fb9b11f278ce8}
-      \strng{fullhash}{91d3d0b1139ce543957fb9b11f278ce8}
-      \strng{fullhashraw}{91d3d0b1139ce543957fb9b11f278ce8}
-      \strng{bibnamehash}{91d3d0b1139ce543957fb9b11f278ce8}
-      \strng{authorbibnamehash}{91d3d0b1139ce543957fb9b11f278ce8}
-      \strng{authornamehash}{91d3d0b1139ce543957fb9b11f278ce8}
-      \strng{authorfullhash}{91d3d0b1139ce543957fb9b11f278ce8}
-      \strng{authorfullhashraw}{91d3d0b1139ce543957fb9b11f278ce8}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{8}
-      \field{title}{Fundamentals of Heat and Mass Transfer}
-      \field{year}{2019}
-    \endentry
-  \enddatalist
-\endrefsection
 \endinput
 

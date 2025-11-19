@@ -85,62 +85,92 @@ sorting=nty
 \end{abstract}
 
 \section*{Nomenclature}
-$Q$ = Volumetric Flowrate (m$^3$/s) \\
-$A$ = Cross-sectional area of flow (m$^2$) \\
-$n$ = Manning's roughness coefficient \\
-$R_H$ = Hydraulic radius (m) \\
-$P_w$ = Wetted perimeter (m) \\
-$S$ = Channel slope (m/m) \\
-$V$ = Velocity (m/s) \\
-$b$ = Channel bottom width (m) \\
-$h$ = Flow depth (m) \\
-$\nu$ = Kinematic viscosity (m$^2$/s) \\
-$g$ = Gravitational acceleration (m/s$^2$) \\
-$\rho$ = Fluid density (kg/m$^3$)\\
-$Re$ = Reynolds number (dimensionless) \\
+\begin{description}
+\item[Navier-Stokes Variables:]
+\item[$u_{i/j}$] = Velocity vector (m/s)  
+\item[{$P$}] = Pressure (Pa)
+\item[$\mu$] = Dynamic viscosity (Pa·s)
+\item[$g_i$] = Gravitational acceleration vector (m/s$^2$)
+\item[$t$] = Time (s)
+\item[$x_{i/j}$] = Spatial coordinate (m)
+\item[$\rho$] = Fluid density (kg/m$^3$)
+\item[$\nu$] = Kinematic viscosity (m$^2$/s)
+\item[Manning's Equation Variables:]
+\item[$Q$] = Volumetric Flowrate (m$^3$/s)
+\item[$A$] = Cross-sectional area of flow (m$^2$)
+\item[$n$] = Manning's roughness coefficient
+\item[$R_H$] = Hydraulic radius (m)
+\item[$P_w$] = Wetted perimeter (m)
+\item[$S$] = Channel slope (m/m)
+\item[$V$] = Average velocity (m/s)
+\item[Shared Variables:] 
+\item[$b$] = Channel bottom width (m)
+\item[$h$] = Flow depth (m)
+\item[$Re$] = Reynolds number (dimensionless)
+\end{description}
 
 \section*{Introduction}
-Manning's equation is an empirical formula used to estimate the flow of water in open channels. It is expressed as:
+Measuring and predicting flow in open channels is a fundamental aspect of both
+hydraulic engineering and engineering hydrology. Several methods exist for estimating
+flow characteristics, the most import of which being volumetric flow rate ($Q$).
+
+The most commonly used method for estimating flow in open channels is Manning's equation:
 
 \begin{equation}
     Q = \frac{1}{n} A R_H^{2/3} S^{1/2}
 \end{equation}
 
-where $Q$ is the discharge (m$^3$/s), $A$ is the cross-sectional area of flow (m$^2$), $R_H$ is the hydraulic radius (m), $S$ is the channel slope (m/m), and $n$ is Manning's roughness coefficient, which accounts for the channel's surface roughness.
-The hydraulic radius $R_H$ is defined as the ratio of the cross-sectional area of flow to the wetted perimeter:
+Where hydraulic radius $R_H$ is defined as the ratio of the cross-sectional area of flow to the wetted perimeter:
 \begin{equation}
     R_H = \frac{A}{P_w}
 \end{equation}
-For a rectangular channel, the cross-sectional area $A$ and wetted perimeter $P_w$ can be expressed as:
-\begin{equation}
-    A = b \cdot h
-\end{equation}
 
-\begin{equation}
-    P_w = b + 2h
-\end{equation}
-where $b$ is the channel bottom width (m) and $h$ is the flow depth (m).
+Manning's equation is applied to all open channels, from culverts, streams, and rivers to
+large canals. It's popularity stems from its simplicity and empirical basis, allowing
+engineers to quickly estimate flow rates with limited data. However, Manning's equations
+has several limitations, including its empirical nature, assumptions of uniform flow, and sensitivity to the
+roughness coefficient $n$. These limitations can lead to inaccuracies in complex flow
+conditions, such as varying channel geometries, unsteady flows, and turbulent regimes.
 
-The Navier-Stokes equations describe the motion of fluid substances and are
-fundamental to fluid dynamics. For incompressible flow, the Navier-Stokes
-equations can be written as:
 
-\begin{equation}    
-    \rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \rho \mathbf{g}
-\end{equation}
-where $\rho$ is the fluid density (kg/m$^3$), $\mathbf{u}$ is the velocity vector (m/s), $p$ is the pressure (Pa), $\mu$ is the dynamic viscosity (Pa·s), and $\mathbf{g}$ is the gravitational acceleration vector (m/s$^2$).
-The Reynolds number ($Re$) is a dimensionless quantity used to predict flow patterns in different fluid flow situations. It is defined as:
+For more complex flow conditions, the Navier-Stokes equations provide a comprehensive
+framework for modeling fluid dynamics. The Navier-Stokes equations describe the motion
+of viscous fluid substances and are derived from the principles of conservation of
+mass, momentum, and energy. They can capture a wide range of flow phenomena,
+including turbulence, boundary layer effects, and non-uniform flow profiles.
+
+
+In this paper, we will not solve the full Navier-Stokes equations, but rather simplify
+them to matching conditions necessary to apply Manning's equation, except for turbulence.
+Our solutions to the Navier-Stokes equations will yield an analytical expression for
+volumetric flowrate under laminar flow conditions in rectangular channels. We will then
+compare the analytically derived flowrates to the empirically derived flowrates from
+Manning's equation to evaluate its accuracy under laminar flow conditions.
+
+We will determine the flow regime using the Reynolds number ($Re$), defined as:
+
 \begin{equation}
     Re = \frac{V R_H}{\nu}
 \end{equation}
+
 where $V$ is the characteristic velocity (m/s), $R_H$ is the hydraulic
 radius (m), and $\nu$ is the kinematic viscosity (m$^2$/s). For a rectangular channel, the hydraulic diameter can be expressed as:
-\begin{equation}
-    R_H = \frac{A}{P_w}
-\end{equation}  
-In this study, we compare the performance of Manning's equation with the Navier-Stokes equations in rectangular channels under varying Reynolds numbers. We focus on laminar flow conditions ($Re$ < 500) to evaluate the accuracy of Manning's equation in predicting flow characteristics.
+
+
+We will consider laminar flow conditions to be such that $Re < 500$.
 
 \section*{Methodology}
+
+\subsection*{Governing Equations}
+
+We start our derivation with the Navier-Stokes equations in three dimensions:
+\begin{equation}    
+   \rho \left( \frac{\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j} \right) = -\frac{\partial P}{\partial x_i} + \mu \frac{\partial^2 u_i}{\partial x_j^2} + \rho g_i
+\end{equation}
+where $\rho$ is the fluid density (kg/m$^3$), $u_i$ is the velocity vector (m/s), $P$
+is the pressure (Pa), $\mu$ is the dynamic viscosity (Pa·s), and $g_i$ is the
+gravitational acceleration vector (m/s$^2$).
+
 
 \subsection*{Assumptions}
 The following assumptions were made to simplify the Navier-Stokes to match the conditions necessary to apply Manning's equation:
@@ -152,18 +182,20 @@ The following assumptions were made to simplify the Navier-Stokes to match the c
     \item Flow is irrotational $\longrightarrow \mathbf{u} \cdot \nabla \mathbf{u} = 0$.
 \end{itemize}
 
-Applying our assumptions to the Navier-Stokes equations in the x-direction, we simplify it to:
+Applying our assumptions to the x-momentum equation, we simplify it to:
 \begin{equation}
     -\rho g_x = \mu [\frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}]
 \end{equation}
 where $g_x$ is the component of gravitational acceleration in the x-direction (m/s$^2$), and $u$ is the velocity component in the x-direction (m/s).
+
+
 With boundary conditions:
 \begin{itemize}
     \item No slip at the bottom and sides: $u = 0$ at $y = 0$, $z = 0$, and $z = b$.
     \item Symmetry at the free surface: $\frac{\partial u}{\partial y} = 0$ at $y = h$.
 \end{itemize}
 
-\subsection*{Flow Rate Calculations}
+\subsection*{Velocity and Flowrate Calculations}
 
 Next we non-dimensionalize the equations using the following variables:
 \begin{equation}
@@ -182,14 +214,14 @@ We solve this equation using separation of variables and apply the boundary cond
 \end{equation}
 where $A_n = \frac{-2}{\lambda_n^3 \cosh(\frac{\lambda_n}{2\alpha})}$.
 
+As shown in Figure~\ref{fig:3d-profile}, the flow distribution meets the boundary conditions defined previously.
+
 \begin{figure}
     \centering
     \includegraphics[width=0.45\textwidth]{3d-profile.png}
     \caption{Rectangular channel geometry showing dimensions and coordinate system.}
     \label{fig:3d-profile}
 \end{figure}
-
-As shown in Figure~\ref{fig:3d-profile}, the flow distribution meets the boundary conditions defined previously.
 
 The volumetric flow rate $Q$ is calculated by integrating the velocity profile over the cross-sectional area:
 \begin{equation}
