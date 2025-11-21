@@ -44,9 +44,9 @@ sorting=nty
 
 % -------------------------------
 % Title, Author, Email
-\title{Comparison of Manning and Navier-Stokes in Rectangular Channels}
-\author{Kenneth T. Quintana}
-\newcommand{\email}{ktquint@byu.edu}
+\title{Manning's and Navier-Stokes in Rectangular Channels}
+\author{Kenneth Quintana, Anna Cardall}
+\newcommand{\email}{ktquint@byu.edu, cardalla@byu.edu}
 
 % ----------------------------------
 
@@ -120,7 +120,9 @@ The most commonly used method for estimating flow in open channels is Manning's 
     Q = \frac{1}{n} A R_H^{2/3} S^{1/2}
 \end{equation}
 
-Where hydraulic radius $R_H$ is defined as the ratio of the cross-sectional area of flow to the wetted perimeter:
+Where hydraulic radius $R_H$ is defined as the ratio of the cross-sectional area of flow to
+the wetted perimeter:
+
 \begin{equation}
     R_H = \frac{A}{P_w}
 \end{equation}
@@ -128,9 +130,10 @@ Where hydraulic radius $R_H$ is defined as the ratio of the cross-sectional area
 Manning's equation is applied to all open channels, from culverts, streams, and rivers to
 large canals. It's popularity stems from its simplicity and empirical basis, allowing
 engineers to quickly estimate flow rates with limited data. However, Manning's equations
-has several limitations, including its empirical nature, assumptions of uniform flow, and sensitivity to the
-roughness coefficient $n$. These limitations can lead to inaccuracies in complex flow
-conditions, such as varying channel geometries, unsteady flows, and turbulent regimes.
+has several limitations, including its empirical nature, assumptions of uniform flow,
+and sensitivity to the roughness coefficient $n$. These limitations can lead to inaccuracies
+in complex flow conditions, such as varying channel geometries, unsteady flows, and turbulent
+regimes.
 
 
 For more complex flow conditions, the Navier-Stokes equations provide a comprehensive
@@ -147,6 +150,7 @@ volumetric flowrate under laminar flow conditions in rectangular channels. We wi
 compare the analytically derived flowrates to the empirically derived flowrates from
 Manning's equation to evaluate its accuracy under laminar flow conditions.
 
+
 We will determine the flow regime using the Reynolds number ($Re$), defined as:
 
 \begin{equation}
@@ -154,7 +158,7 @@ We will determine the flow regime using the Reynolds number ($Re$), defined as:
 \end{equation}
 
 where $V$ is the characteristic velocity (m/s), $R_H$ is the hydraulic
-radius (m), and $\nu$ is the kinematic viscosity (m$^2$/s). For a rectangular channel, the hydraulic diameter can be expressed as:
+radius (m), and $\nu$ is the kinematic viscosity (m$^2$/s).
 
 
 We will consider laminar flow conditions to be such that $Re < 500$.
@@ -184,7 +188,7 @@ The following assumptions were made to simplify the Navier-Stokes to match the c
 
 Applying our assumptions to the x-momentum equation, we simplify it to:
 \begin{equation}
-    -\rho g_x = \mu [\frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}]
+    -\rho g_x = \mu \left(\frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}\right)
 \end{equation}
 where $g_x$ is the component of gravitational acceleration in the x-direction (m/s$^2$), and $u$ is the velocity component in the x-direction (m/s).
 
@@ -210,16 +214,19 @@ where $\alpha = \frac{h}{b}$ is the aspect ratio of the channel.
 
 We solve this equation using separation of variables and apply the boundary conditions to find the velocity profile
 \begin{equation}
-    \hat{u}(\hat{y}, \hat{z}) = \hat{y} - \frac{\hat{y}^2}{2} + \sum_{n=1}^{\infty}A_n\sin(\lambda_n \hat{y})\cosh(\frac{\lambda_n}{\alpha}(\hat{z}-\frac{1}{2}))
+    \hat{u}(\hat{y}, \hat{z}) = \hat{y} - \frac{\hat{y}^2}{2} + \sum_{n=1}^{\infty}A_n\sin(\lambda_n \hat{y})\cosh\left[\frac{\lambda_n}{\alpha}\left(\hat{z}-\frac{1}{2}\right)\right]
 \end{equation}
-where $A_n = \frac{-2}{\lambda_n^3 \cosh(\frac{\lambda_n}{2\alpha})}$.
+
+where $A_n = \frac{-2}{\lambda_n^3 \cosh\left(\frac{\lambda_n}{2\alpha}\right)}$.
+
+
 
 As shown in Figure~\ref{fig:3d-profile}, the flow distribution meets the boundary conditions defined previously.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.45\textwidth]{3d-profile.png}
-    \caption{Rectangular channel geometry showing dimensions and coordinate system.}
+    \includegraphics[width=0.45\textwidth]{figures/3d-profile.png}
+    \caption{Non-dimensionalized velocity profile.}
     \label{fig:3d-profile}
 \end{figure}
 
@@ -231,7 +238,7 @@ The volumetric flow rate $Q$ is calculated by integrating the velocity profile o
 We are left with a final expression for $Q$ in terms of channel dimensions and fluid properties:
 
 \begin{equation}
-    Q = (\frac{h^3 b g \sin \theta}{\nu}) \left( \frac{1}{3} - \frac{4h}{b} \sum_{n=1}^{\infty} \frac{1}{\lambda_n^5} \tanh(\frac{\lambda_n b}{2h}) \right)
+    Q = \frac{h^3 b g \sin \theta}{\nu} \left[ \frac{1}{3} - \frac{4h}{b} \sum_{n=1}^{\infty} \frac{1}{\lambda_n^5} \tanh\left(\frac{\lambda_n b}{2h}\right) \right]
 \end{equation}
 
 
@@ -239,31 +246,39 @@ Manning's equation for volumetric flow rate in a rectangular channel is given by
 \begin{equation}
     Q = \frac{1}{n} A R_H^{2/3} S^{1/2}
 \end{equation}
-Substituting the expressions for $A$ and $R_H$ for a rectangular channel, we have:
-\begin{equation}
-    Q = \frac{1}{n} {(b h)} {(\frac{b h}{b + 2h})}^{2/3} S^{1/2}
-\end{equation}
+Substituting the expressions for $A$ and $R_H$ for a rectangular channel and rearranging
+to solve for $n$, we have:
 
-\subsection*{Solving for Manning's n}
-
-Rearranging for Manning's $n$, we get:
 \begin{equation}
-    n = \frac{(b h) {( \frac{b h}{b + 2h})}^{2/3} S^{1/2}}{Q}
+    n = \frac{1}{Q}(b h) {\left(\frac{b h}{b + 2h}\right)}^{2/3} S^{1/2}
 \end{equation}
 
 \subsection*{Reynold's Number Selection}
-To evaluate the performance of Manning's equation under laminar flow conditions, we select a range of Reynolds numbers ($Re$) below 500. The Reynolds number is calculated using the formula:
+To evaluate the performance of Manning's equation under laminar flow conditions,
+we selected a range of Reynolds numbers ($Re$) from 250 (laminar) to 12,500
+(fully turbulent).
+
+$Re$ is defined as:
 \begin{equation}
     Re = \frac{V R_H}{\nu}
 \end{equation}
-where $V$ is the average velocity (m/s), $R_H$ is the hydraulic radius (m), and $\nu$ is the kinematic viscosity (m$^2$/s).
+where $V$ is the average velocity (m/s).
 
-Simplifying the Reynold's number for a rectangular channel, we have:
-\begin{equation}
-    Re = \frac{Q}{P_w \nu}
-\end{equation}
+For each selected $Re$, we calculated the flowrate for a combination of channel
+widths ($b$ = 0.01 to 5 m) and slopes ($S$ = 0.01 to 0.1 m/m). From the 
+Navier-Stokes derived flowrate, we calculated Manning's $n$ using the rearranged
+Manning's equation. If Manning's equation were accurate, the calculated $n$
+values would fall within typical ranges for smooth rectangular channels
+(0.009 to 0.012).
 
 \section*{Results and Discussion}
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=.45\textwidth]{figures/n-vs-Q-Re.png}
+    \caption{Manning's $n$ vs. Discharge for several values of $Re$.}
+    \label{fig:n-vs-Q}
+\end{figure}
 
 \section*{Conclusions}
 Put conclusions here.
