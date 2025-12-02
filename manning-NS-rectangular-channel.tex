@@ -110,6 +110,7 @@ sorting=nty
 \item[$b$] = Channel bottom width (m)
 \item[$h$] = Flow depth (m)
 \item[$Re$] = Reynolds number (dimensionless)
+\item[$\alpha$] = {$h/b$} = Aspect ratio (dimensionless)
 \end{description}
 
 \section*{Introduction}
@@ -289,12 +290,12 @@ values would fall within typical ranges for smooth rectangular channels
 
 \section*{Results and Discussion}
 
-We found that no Reynolds numbers yielded similar discharge values in both
+We found that no $Re$ yielded similar discharge values in both
 the Navier-Stokes and Manning's equations. when using typical values of Manning's $n$ for
 smooth rectangular channels. Figure~\ref{fig:flowrate-agreement} shows the comparison of
-flowrates across tested Reynolds numbers, with small regions where the two flowrates are
+flowrates across tested $Re$ values, with small regions where the two flowrates are
 equivalent. Table~\ref{tab:reynolds_analysis} summarizes the best
-matches found for each Reynolds number, along with the corresponding aspect ratio
+matches found for each $Re$, along with the corresponding aspect ratio
 
 \begin{figure}
     \centering
@@ -322,7 +323,7 @@ matches found for each Reynolds number, along with the corresponding aspect rati
 
 Exploring further, we found a range of aspect ratios where the percent error between was minimized.
 Figure~\ref{fig:error-analysis} shows the error between the two flowrates across aspect ratios for
-all tested Reynolds numbers. The area highlighted in green indicates the range where the comparisons have
+all tested $Re$ values. The area highlighted in green indicates the range where the comparisons have
 an error of less than 5\%.
 
 
@@ -333,9 +334,9 @@ an error of less than 5\%.
     \label{fig:error-analysis}
 \end{figure}
 
-Our analysis revealed that across all Reynolds numbers the Navier-Stokes flowrate was greater
-than the Manning's flowrate for aspect ratios greater than about 45 The opposite was true for
-aspect ratios less than about 17. Table~\ref{tab:global_alpha_range}
+Our analysis revealed the Navier-Stokes flowrates were  greater
+than the Manning's flowrate for aspect ratios greater than about 45 and across all $Re$ values.
+ The opposite was true for aspect ratios less than 17. Table~\ref{tab:global_alpha_range}
 summarizes the global aspect ratio range where the error between the two flowrates is
 less than 5\%.
 
@@ -369,7 +370,7 @@ leading to closer agreement in flowrates.
 Our study compared the performance of Manning's equation with the Navier-Stokes equations
 in rectangular channels under laminar and turbulent flow conditions. We compared an analytically 
 derived flowrate from the Navier-Stokes equations to the empirically derived flowrate
-from Manning's equation across a range of Reynolds numbers (250 to 12,500). Our results indicated
+from Manning's equation across a range of $Re$ values (250 to 12,500). Our results indicated
 that exact matches between the two flowrates were not achievable across any Reynolds numbers using typical
 values of Manning's $n$ for smooth channels. However, we identified a range of aspect ratios
 (17 to 45) where the error between the two flowrates was less than 5\%. Agreement occured
