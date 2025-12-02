@@ -114,24 +114,23 @@ flow characteristics, the most import of which being volumetric flow rate ($Q$).
 The most commonly used method for estimating flow in open channels is Manning's equation:
 
 \begin{equation}
-    Q = \frac{1}{n} A R_H^{2/3} S^{1/2}
+    Q = \frac{1}{n} A R_H^{2/3} S^{1/2},
 \end{equation}
 
-Where hydraulic radius $R_H$ is defined as the ratio of the cross-sectional area of flow to
-the wetted perimeter:
+where hydraulic radius $R_H$ is defined as the ratio of the cross-sectional area of flow to
+the wetted perimeter, given as
 
 \begin{equation}
-    R_H = \frac{A}{P_w}
+    R_H = \frac{A}{P_w}.
 \end{equation}
 
 Manning's equation is applied to all open channels, from culverts, streams, and rivers to
-large canals. It's popularity stems from its simplicity and empirical basis, allowing
-engineers to quickly estimate flow rates with limited data. However, Manning's equations
+large canals \cite{GioiaPhysRevLett}. It's popularity stems from its simplicity and empirical basis, allowing
+engineers to quickly estimate flow rates based on channel characteristics \cite{GioiaPhysRevLett}. However, Manning's equation
 has several limitations, including its empirical nature, assumptions of uniform flow,
-and sensitivity to the roughness coefficient $n$. These limitations can lead to inaccuracies
+and sensitivity to the roughness coefficient, $n$. These limitations can lead to inaccuracies
 in complex flow conditions, such as varying channel geometries, unsteady flows, and turbulent
 regimes.
-
 
 For more complex flow conditions, the Navier-Stokes equations provide a comprehensive
 framework for modeling fluid dynamics. The Navier-Stokes equations describe the motion
@@ -146,19 +145,14 @@ volumetric flowrate under laminar flow conditions in rectangular channels. We wi
 compare the analytically derived flowrates to the empirically derived flowrates from
 Manning's equation to evaluate its accuracy under laminar flow conditions.
 
-
-We will determine the flow regime using the Reynolds number ($Re$), defined as:
+We will determine the flow regime using the Reynolds number ($Re$), defined as
 
 \begin{equation}
-    Re = \frac{V R_H}{\nu}
+    Re = \frac{V R_H}{\nu},
 \end{equation}
 
 where $V$ is the characteristic velocity (m/s), $R_H$ is the hydraulic
-radius (m), and $\nu$ is the kinematic viscosity (m$^2$/s).
-
-
-We will consider laminar flow conditions to be such that $Re < 500$.
-
+radius (m), and $\nu$ is the kinematic viscosity (m$^2$/s). We will consider laminar flow conditions to be such that $Re < 500$.
 
 \begin{figure} 
     \centering
@@ -172,9 +166,11 @@ We will consider laminar flow conditions to be such that $Re < 500$.
 \subsection*{Governing Equations}
 
 We start our derivation with the Navier-Stokes equations in three dimensions:
+
 \begin{equation}    
-   \rho \left( \frac{\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j} \right) = -\frac{\partial P}{\partial x_i} + \mu \frac{\partial^2 u_i}{\partial x_j^2} + \rho g_i
+   \rho \left( \frac{\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j} \right) = -\frac{\partial P}{\partial x_i} + \mu \frac{\partial^2 u_i}{\partial x_j^2} + \rho g_i,
 \end{equation}
+
 where $\rho$ is the fluid density (kg/m$^3$), $u_i$ is the velocity vector (m/s), $P$
 is the pressure (Pa), $\mu$ is the dynamic viscosity (Pa·s), and $g_i$ is the
 gravitational acceleration vector (m/s$^2$).
@@ -190,9 +186,9 @@ The following assumptions were made to simplify the Navier-Stokes to match the c
     \item Flow is irrotational $\longrightarrow \mathbf{u} \cdot \nabla \mathbf{u} = 0$.
 \end{itemize}
 
-Applying our assumptions to the x-momentum equation, we simplify it to:
+Applying our assumptions to the x-momentum equation, we simplify it to
 \begin{equation}
-    -\rho g_x = \mu \left(\frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}\right)
+    -\rho g_x = \mu \left(\frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}\right),
 \end{equation}
 where $g_x$ is the component of gravitational acceleration in the x-direction (m/s$^2$), and $u$ is the velocity component in the x-direction (m/s).
 
@@ -215,23 +211,21 @@ With boundary conditions:
 
 Next we non-dimensionalize the equations using the following variables:
 \begin{equation}
-    \hat{y} = \frac{y}{h}, \quad \hat{z} = \frac{z}{b}, \quad \hat{u} = \frac{u \nu}{h^2 g \sin \theta}
+    \hat{y} = \frac{y}{h}, \quad \hat{z} = \frac{z}{b}, \quad \hat{u} = \frac{u \nu}{h^2 g \sin \theta},
 \end{equation}
 where $\theta$ is the angle of the channel slope.
-Substituting these into the simplified Navier-Stokes equation, we obtain the non-dimensional form:
+Substituting these into the simplified Navier-Stokes equation, we obtain the non-dimensional form
 \begin{equation}
-    -1 = \frac{\partial^2 \hat{u}}{\partial \hat{y}^2} + \alpha^2 \frac{\partial^2 \hat{u}}{\partial \hat{z}^2}
+    -1 = \frac{\partial^2 \hat{u}}{\partial \hat{y}^2} + \alpha^2 \frac{\partial^2 \hat{u}}{\partial \hat{z}^2},
 \end{equation}
 where $\alpha = \frac{h}{b}$ is the aspect ratio of the channel.
 
 We solve this equation using separation of variables and apply the boundary conditions to find the velocity profile
 \begin{equation}
-    \hat{u}(\hat{y}, \hat{z}) = \hat{y} - \frac{\hat{y}^2}{2} + \sum_{n=1}^{\infty}A_n\sin(\lambda_n \hat{y})\cosh\left[\frac{\lambda_n}{\alpha}\left(\hat{z}-\frac{1}{2}\right)\right]
+    \hat{u}(\hat{y}, \hat{z}) = \hat{y} - \frac{\hat{y}^2}{2} + \sum_{n=1}^{\infty}A_n\sin(\lambda_n \hat{y})\cosh\left[\frac{\lambda_n}{\alpha}\left(\hat{z}-\frac{1}{2}\right)\right],
 \end{equation}
 
 where $A_n = \frac{-2}{\lambda_n^3 \cosh\left(\frac{\lambda_n}{2\alpha}\right)}$.
-
-
 
 As shown in Figure~\ref{fig:3d-profile}, the flow distribution meets the boundary conditions defined previously.
 
@@ -244,37 +238,31 @@ As shown in Figure~\ref{fig:3d-profile}, the flow distribution meets the boundar
 
 The volumetric flow rate $Q$ is calculated by integrating the velocity profile over the cross-sectional area:
 \begin{equation}
-    Q = \int_0^b \int_0^h u(y, z) \, dy \, dz
+    Q = \int_0^b \int_0^h u(y, z) \, dy \, dz.
 \end{equation}
 
 We are left with a final expression for $Q$ in terms of channel dimensions and fluid properties:
 
 \begin{equation}
-    Q = \frac{h^3 b g \sin \theta}{\nu} \left[ \frac{1}{3} - \frac{4h}{b} \sum_{n=1}^{\infty} \frac{1}{\lambda_n^5} \tanh\left(\frac{\lambda_n b}{2h}\right) \right]
+    Q = \frac{h^3 b g \sin \theta}{\nu} \left[ \frac{1}{3} - \frac{4h}{b} \sum_{n=1}^{\infty} \frac{1}{\lambda_n^5} \tanh\left(\frac{\lambda_n b}{2h}\right) \right].
 \end{equation}
 
 
-Manning's equation for volumetric flow rate in a rectangular channel is given by:
+Manning's equation for volumetric flow rate in a rectangular channel is given by
 \begin{equation}
-    Q = \frac{1}{n} A R_H^{2/3} S^{1/2}
+    Q = \frac{1}{n} A R_H^{2/3} S^{1/2}.
 \end{equation}
 Substituting the expressions for $A$ and $R_H$ for a rectangular channel and rearranging
-to solve for $n$, we have:
+to solve for $n$, we have
 
 \begin{equation}
-    n = \frac{1}{Q}(b h) {\left(\frac{b h}{b + 2h}\right)}^{2/3} S^{1/2}
+    n = \frac{1}{Q}(b h) {\left(\frac{b h}{b + 2h}\right)}^{2/3} S^{1/2}.
 \end{equation}
 
 \subsection*{Reynold's Number Selection}
 To evaluate the performance of Manning's equation under laminar flow conditions,
 we selected a range of Reynolds numbers ($Re$) from 250 (laminar) to 12,500
 (fully turbulent).
-
-$Re$ is defined as:
-\begin{equation}
-    Re = \frac{V R_H}{\nu}
-\end{equation}
-where $V$ is the average velocity (m/s).
 
 For each selected $Re$, we calculated the flowrate for a combination of channel
 widths ($b$ = 0.01 to 5 m) and slopes ($S$ = 0.01 to 0.1 m/m). From the 
