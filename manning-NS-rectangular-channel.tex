@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{booktabs}
 \usepackage[
 backend=biber,
 style=numeric,
@@ -273,16 +274,100 @@ values would fall within typical ranges for smooth rectangular channels
 (0.009 to 0.012).
 
 \section*{Results and Discussion}
+For the range of Reynolds numbers we tested, we found that there were no values
+that yielded equivalent flowrates between the Navier-Stokes and Manning's equations
+when using typical values of Manning's $n$ for smooth rectangular channels. Figure~\ref{fig:flowrate-agreement} shows the comparison
+of flowrates across all tested Reynolds numbers. The figure shows that there are
+regions where the two flowrates reach a perfect match. Table~\ref{tab:reynolds_analysis} summarizes the best
+matches found for each Reynolds number, along with the corresponding aspect ratio
 
-\begin{figure} 
+\begin{figure}
     \centering
-    \includegraphics[width=.45\textwidth]{figures/n-vs-Q-Re.png}
-    \caption{Manning's $n$ vs. Discharge for several values of $Re$.}
-    \label{fig:n-vs-Q}
+    \includegraphics[width=0.45\textwidth]{figures/flowrate-agreement.png}
+    \caption{Comparison of Navier-Stokes and Manning's flowrates across Reynolds numbers.}
+    \label{fig:flowrate-agreement}
 \end{figure}
 
+
+\begin{table}[h!]
+    \centering
+    \caption{Best Match per Reynolds Number}
+    \label{tab:reynolds_analysis}
+    \begin{tabular}{c c c}
+        \toprule
+        \textbf{Re} & \textbf{Optimal $\boldsymbol{\alpha}$} & \textbf{Error (\%)} \\
+        \midrule
+        250   & 34.1 & 0.0544 \\
+        500   & 24.7 & 0.0167 \\
+        2,000  & 23.2 & 0.593 \\
+        12,500 & 24.1 & 0.0509 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Exploring further, we found that while exact matches were not achievable across the
+tested Reynolds numbers, there were aspect ratios where the percent error between
+the two flowrates was minimized. Figure~\ref{fig:error-analysis} shows the error
+between the two flowrates across aspect ratios for all tested Reynolds numbers.
+The area highlighted in green indicates where the some comparisons have an error of less than 5\%.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/error-analysis-range.png}
+    \caption{Error reduction of Navier-Stokes and Manning's Discharge.}
+    \label{fig:error-analysis}
+\end{figure}
+
+Our analysis revealed that for aspect ratios greater than about 45, the Navier-Stokes
+flowrate was greater than the Manning's flowrate. The opposite was true for aspect ratios
+less than about 17. Those values represent the bounds where Manning's equation and the 
+Navier-Stokes equations yield similar flowrates. Table~\ref{tab:global_alpha_range}
+summarizes the global aspect ratio range where the error between the two flowrates is
+less than 5\%.
+
+\begin{table}[h!]
+    \centering
+    \caption{Global $\alpha$ Range with $< 5.0\%$ Error}
+    \label{tab:global_alpha_range}
+    \begin{tabular}{l c}
+        \toprule
+        \textbf{Statistic} & \textbf{Value} \\
+        \midrule
+        Min $\alpha$  & 17.0 \\
+        Max $\alpha$  & 44.8 \\
+        Mean $\alpha$ & 26.7 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The alpha values minimizing percent error suggest that agreement occurs when the depth
+of flow is much greater than the width of the channel. Considering the fundamental physics
+governing the Navier-Stokes equations and the empirical nature of Manning's equation, we can see
+the cause for this agreement. Our Navier-Stokes account for the viscous forces acting
+across the entire cross-section of the flow, while Manning's equation simplifies these
+effects into a single roughness coefficient $n$. When the flow depth is significantly
+greater than the channel width, the influence of roughness on the channel walls is felt 
+throughout the flow area. With roughness affecting the entire flow, the friction forces
+from Manning's equation behave more similarly to the viscous forces from the Navier-Stokes
+equations, leading to closer agreement in flowrates.
+
 \section*{Conclusions}
-Put conclusions here.
+Our study compared the performance of Manning's equation with the Navier-Stokes equations
+in rectangular channels under laminar and turbulent flow conditions. We derived an analytical
+expression for volumetric flowrate using the Navier-Stokes equations and compared it to the
+flowrate calculated using Manning's equation. Our results indicated that exact matches between
+the two flowrates were not achievable across a range of Reynolds numbers when using typical
+values of Manning's $n$ for smooth channels. However, we identified a range of aspect ratios
+(17 to 45) where the error between the two flowrates could be as low as 5\%. This agreement
+occurred when the flow depth was significantly greater than the channel width, suggesting that
+under these conditions, the roughness assumptions of Manning's equation align more closely with
+the fundamental physics captured by the Navier-Stokes equations. These findings highlight the
+limitations of Manning's equation in laminar flow conditions and those of applying the simplified
+Navier-Stokes equations to turbulent flow. Future research could explore the performance of
+Manning's equation in more complex channel geometries and unsteady flow conditions, as well as
+investigate the effects of varying roughness coefficients on flow predictions.
+
 
 \section*{Acknowledgements}
 The authors would like to acknowledge Dr.\ Vladimir P. Soloviev for his guidance and support in teaching the ME 505 course on Applied Engineering Mathematics.
