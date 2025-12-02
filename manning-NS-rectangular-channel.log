@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  20 NOV 2025 21:33
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  2 DEC 2025 13:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/kennyquintana/Github/ME-505-Paper/manning-NS-rectangular-channel.tex
-(/Users/kennyquintana/Github/ME-505-Paper/manning-NS-rectangular-channel.tex
+**/Users/kennyquintana/Developer/ME-505-Paper/manning-NS-rectangular-channel.tex
+(/Users/kennyquintana/Developer/ME-505-Paper/manning-NS-rectangular-channel.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -561,33 +561,44 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
+File: figures/channel-and-coordinates 1.png Graphic file (type bmp)
+<figures/channel-and-coordinates 1.png>
+
 
 
 
 [2]
-Overfull \hbox (0.64479pt too wide) detected at line 218
+File: figures/boundary-conditions 1.png Graphic file (type bmp)
+<figures/boundary-conditions 1.png>
+
+Overfull \hbox (0.64479pt too wide) detected at line 229
 [][]\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ) = [] \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 + [] \OML/cmm/m/it/10 A[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U[][]\OT1/cmr/m/n/10 ) [] []
  []
+
+
 
 File: figures/3d-profile.png Graphic file (type bmp)
 <figures/3d-profile.png>
 
 
+[3]
 File: figures/n-vs-Q-Re.png Graphic file (type bmp)
 <figures/n-vs-Q-Re.png>
 
-Underfull \vbox (badness 1852) has occurred while \output is active []
+
+LaTeX Warning: Empty bibliography on input line 304.
 
 
 
-[3]
 
 
-LaTeX Warning: Empty bibliography on input line 293.
+[4]
 
 
 
-[4] 
+[5
+
+] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./manning-NS-rectangular-channel.aux)
  ***********
@@ -599,12 +610,12 @@ Package logreq Info: Writing requests to 'manning-NS-rectangular-channel.run.xml
 
  ) 
 Here is how much of TeX's memory you used:
- 13441 strings out of 473832
- 295853 string characters out of 5729482
- 1260177 words of memory out of 5000000
- 36354 multiletter control sequences out of 15000+600000
+ 13461 strings out of 473832
+ 296634 string characters out of 5729482
+ 1257221 words of memory out of 5000000
+ 36372 multiletter control sequences out of 15000+600000
  560784 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,12n,94p,760b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,13n,94p,763b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on manning-NS-rectangular-channel.xdv (4 pages, 87276 bytes).
+Output written on manning-NS-rectangular-channel.xdv (5 pages, 86880 bytes).

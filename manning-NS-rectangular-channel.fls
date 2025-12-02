@@ -1,8 +1,8 @@
-PWD /Users/kennyquintana/Github/ME-505-Paper
+PWD /Users/kennyquintana/Developer/ME-505-Paper
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/xetex/xelatex.fmt
-INPUT /Users/kennyquintana/Github/ME-505-Paper/manning-NS-rectangular-channel.tex
+INPUT /Users/kennyquintana/Developer/ME-505-Paper/manning-NS-rectangular-channel.tex
 OUTPUT manning-NS-rectangular-channel.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -147,6 +147,12 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 OUTPUT manning-NS-rectangular-channel.xdv
+INPUT ./figures/channel-and-coordinates 1.png
+INPUT ./figures/channel-and-coordinates 1.png
+INPUT ./figures/channel-and-coordinates 1.png
+INPUT ./figures/boundary-conditions 1.png
+INPUT ./figures/boundary-conditions 1.png
+INPUT ./figures/boundary-conditions 1.png
 INPUT ./figures/3d-profile.png
 INPUT ./figures/3d-profile.png
 INPUT ./figures/3d-profile.png

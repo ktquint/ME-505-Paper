@@ -76,12 +76,8 @@ sorting=nty
     equation with the Navier-Stokes equations in rectangular channels under
     varying Reynold's Numbers. Assuming laminar flow ($Re$ < 500), we calculate 
     values of Manning's $n$ and compare them to traditional values.
-    Our results indicate that for laminar flow, Manning's equation provides
-    reasonable estimates for uniform flow. Under turbulent and transitional flows,
-    the analytical solution to the laminar Navier-Stokes equations is no longer valid,
-    so we made no comparison. The findings
-    highlight the importance of selecting appropriate modeling techniques based on
-    flow conditions for accurate hydraulic predictions.
+    Our results indicate
+
 \end{abstract}
 
 \section*{Nomenclature}
@@ -142,7 +138,6 @@ of viscous fluid substances and are derived from the principles of conservation 
 mass, momentum, and energy. They can capture a wide range of flow phenomena,
 including turbulence, boundary layer effects, and non-uniform flow profiles.
 
-
 In this paper, we will not solve the full Navier-Stokes equations, but rather simplify
 them to matching conditions necessary to apply Manning's equation, except for turbulence.
 Our solutions to the Navier-Stokes equations will yield an analytical expression for
@@ -162,6 +157,14 @@ radius (m), and $\nu$ is the kinematic viscosity (m$^2$/s).
 
 
 We will consider laminar flow conditions to be such that $Re < 500$.
+
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=.45\textwidth]{figures/channel-and-coordinates 1.png}
+    \caption{Rectangular channel and coordinate system.}
+    \label{fig:channel-and-coordinates}
+\end{figure}
 
 \section*{Methodology}
 
@@ -198,6 +201,14 @@ With boundary conditions:
     \item No slip at the bottom and sides: $u = 0$ at $y = 0$, $z = 0$, and $z = b$.
     \item Symmetry at the free surface: $\frac{\partial u}{\partial y} = 0$ at $y = h$.
 \end{itemize}
+
+\begin{figure} 
+    \centering
+    \includegraphics[width=.45\textwidth]{figures/boundary-conditions 1.png}
+    \caption{Boundary conditions for open channel flow.}
+    \label{fig:channel-boundary-conditions}
+\end{figure}
+
 
 \subsection*{Velocity and Flowrate Calculations}
 

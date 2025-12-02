@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber manning-NS-rectangular-channel"] 1763427428.20974 "manning-NS-rectangular-channel.bcf" "manning-NS-rectangular-channel.bbl" "manning-NS-rectangular-channel" 1763699589.74802 0
-  "manning-NS-rectangular-channel.bcf" 1763699589.27407 108510 c49f9232a28b2333b8b8a916d1a902d1 "xelatex"
+["biber manning-NS-rectangular-channel"] 1763427428.20974 "manning-NS-rectangular-channel.bcf" "manning-NS-rectangular-channel.bbl" "manning-NS-rectangular-channel" 1764707134.86442 0
+  "manning-NS-rectangular-channel.bcf" 1764707134.26225 108510 c49f9232a28b2333b8b8a916d1a902d1 "xelatex"
   (generated)
   "manning-NS-rectangular-channel.bbl"
   "manning-NS-rectangular-channel.blg"
   (rewritten before read)
-["xdvipdfmx"] 1763699589.30433 "manning-NS-rectangular-channel.xdv" "manning-NS-rectangular-channel.pdf" "manning-NS-rectangular-channel" 1763699589.74866 0
-  "manning-NS-rectangular-channel.xdv" 1763699589.27469 87276 07674d87a42cb3b3642aeb3628178888 "xelatex"
+["xdvipdfmx"] 1764707134.30346 "manning-NS-rectangular-channel.xdv" "manning-NS-rectangular-channel.pdf" "manning-NS-rectangular-channel" 1764707134.86504 0
+  "manning-NS-rectangular-channel.xdv" 1764707134.26457 86880 89a464177dc6a12201d61461974ee41c "xelatex"
   (generated)
   "manning-NS-rectangular-channel.pdf"
   (rewritten before read)
-["xelatex"] 1763699588.55636 "/Users/kennyquintana/Github/ME-505-Paper/manning-NS-rectangular-channel.tex" "manning-NS-rectangular-channel.xdv" "manning-NS-rectangular-channel" 1763699589.74807 0
-  "/Users/kennyquintana/Github/ME-505-Paper/manning-NS-rectangular-channel.tex" 1763699588.46 11885 c096a04d76663cf0f2885ef54c6a941c ""
+["xelatex"] 1764707133.58543 "/Users/kennyquintana/Developer/ME-505-Paper/manning-NS-rectangular-channel.tex" "manning-NS-rectangular-channel.xdv" "manning-NS-rectangular-channel" 1764707134.86446 0
+  "/Users/kennyquintana/Developer/ME-505-Paper/manning-NS-rectangular-channel.tex" 1764707132.79002 11930 47d09cac7e4d4feb46c93a1bd6113eba ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -78,11 +78,13 @@
   "/usr/local/texlive/2025/texmf-var/web2c/xetex/xelatex.fmt" 1741450550 5639796 b6822fbf027c6598cec2e241e0925725 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "figures/3d-profile.png" 1763699140.3923 156393 c0eba101b081a24cf42d18930a73cd03 ""
+  "figures/boundary-conditions 1.png" 1764706656.53177 56906 0c2735e8c3d2c102f1efbe395e097f72 ""
+  "figures/channel-and-coordinates 1.png" 1764706665.76878 56852 3752bd7b061303f0e23336085a736f51 ""
   "figures/n-vs-Q-Re.png" 1763698404.86789 87638 20206eacaca23db6efc27625b2974ac1 ""
-  "manning-NS-rectangular-channel.aux" 1763699589.27321 634 dbbc7d46792c0dea7ee3d469b6c942eb "xelatex"
+  "manning-NS-rectangular-channel.aux" 1764707134.25954 1050 1049cc5fb8d70a13a90df9846bb68c88 "xelatex"
   "manning-NS-rectangular-channel.bbl" 1763427430.95193 466 76d65a242ec496c9b4361af646ff12cb "biber manning-NS-rectangular-channel"
-  "manning-NS-rectangular-channel.run.xml" 1763699589.27454 2542 03c39b9bc4420eaac5eb367d07839ba6 "xelatex"
-  "manning-NS-rectangular-channel.tex" 1763699588.46 11885 c096a04d76663cf0f2885ef54c6a941c ""
+  "manning-NS-rectangular-channel.run.xml" 1764707134.26414 2542 03c39b9bc4420eaac5eb367d07839ba6 "xelatex"
+  "manning-NS-rectangular-channel.tex" 1764707132.79002 11930 47d09cac7e4d4feb46c93a1bd6113eba ""
   (generated)
   "manning-NS-rectangular-channel.aux"
   "manning-NS-rectangular-channel.bcf"
