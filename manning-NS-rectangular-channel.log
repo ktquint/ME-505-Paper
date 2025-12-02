@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  2 DEC 2025 14:34
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  2 DEC 2025 14:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -647,4 +647,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  79i,14n,94p,2391b,4791s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on manning-NS-rectangular-channel.xdv (5 pages, 131448 bytes).
+Output written on manning-NS-rectangular-channel.xdv (5 pages, 131148 bytes).
