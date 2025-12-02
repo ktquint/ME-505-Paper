@@ -125,7 +125,7 @@ the wetted perimeter, given as
 \end{equation}
 
 Manning's equation is applied to all open channels, from culverts, streams, and rivers to
-large canals \cite{GioiaPhysRevLett}. It's popularity stems from its simplicity and 
+large canals with gravity-driven flows \cite{GioiaPhysRevLett}. It's popularity stems from its simplicity and 
 empirical basis, allowing engineers to quickly estimate flow rates based on channel 
 characteristics \cite{GioiaPhysRevLett}. However, Manning's equation has several limitations, 
 including its purely empirical (rather than theoretical) nature, assumptions of uniform flow,
@@ -140,21 +140,12 @@ of viscous fluid substances and are derived from the principles of conservation 
 mass, momentum, and energy. They can capture a wide range of flow phenomena,
 including turbulence, boundary layer effects, and non-uniform flow profiles.
 
-In this paper, we will not solve the full Navier-Stokes equations, but rather simplify
-them to matching conditions necessary to apply Manning's equation, except for turbulence.
-Our solutions to the Navier-Stokes equations will yield an analytical expression for
-volumetric flowrate under laminar flow conditions in rectangular channels. We will then
-compare the analytically derived flowrates to the empirically derived flowrates from
-Manning's equation to evaluate its accuracy under laminar flow conditions.
-
-We will determine the flow regime using the Reynolds number ($Re$), defined as
-
-\begin{equation}
-    Re = \frac{V R_H}{\nu},
-\end{equation}
-
-where $V$ is the characteristic velocity (m/s), $R_H$ is the hydraulic
-radius (m), and $\nu$ is the kinematic viscosity (m$^2$/s). We will consider laminar flow conditions to be such that $Re < 500$.
+In this paper, we evaluate the accuracy of Manning's equations for laminar flow conditions
+in an open rectangular channel (\ref{fig:channel-and-coordinates}). We do this by comparing
+volumetric flowrates obtained with Navier-Stokes equation for laminar flow to those obtained 
+by Manning's equation for several flow velocities and channel aspect ratios. We do not solve 
+the full Navier-Stokes equations, but rather simplify them using the conditions for Manning's 
+equation, except for turbulence.
 
 \begin{figure} 
     \centering
@@ -166,8 +157,16 @@ radius (m), and $\nu$ is the kinematic viscosity (m$^2$/s). We will consider lam
 \section*{Methodology}
 
 \subsection*{Governing Equations}
+We determine the flow regime using the Reynolds number ($Re$), defined as
 
-We start our derivation with the Navier-Stokes equations in three dimensions:
+\begin{equation}
+    Re = \frac{V R_H}{\nu},
+\end{equation}
+
+where $V$ is the characteristic velocity (m/s), $R_H$ is the hydraulic
+radius (m), and $\nu$ is the kinematic viscosity (m$^2$/s). We will consider laminar flow conditions to be such that $Re < 500$.
+
+For gravity-driven flows, the Navier Stokes equation is given as
 
 \begin{equation}    
    \rho \left( \frac{\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j} \right) = -\frac{\partial P}{\partial x_i} + \mu \frac{\partial^2 u_i}{\partial x_j^2} + \rho g_i,
