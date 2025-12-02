@@ -16,5 +16,56 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{GioiaPhysRevLett}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=10ad12486b78ba5fd0e546badd578eb5}{%
+           family={Gioia},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4c26b8fd7846daef21ab8a1664c0813c}{%
+           family={Chakraborty},
+           familyi={C\bibinitperiod},
+           given={Pinaki},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{fef2c75e19c6f121c7dca1c86a9aa9d1}
+      \strng{fullhash}{fef2c75e19c6f121c7dca1c86a9aa9d1}
+      \strng{fullhashraw}{fef2c75e19c6f121c7dca1c86a9aa9d1}
+      \strng{bibnamehash}{fef2c75e19c6f121c7dca1c86a9aa9d1}
+      \strng{authorbibnamehash}{fef2c75e19c6f121c7dca1c86a9aa9d1}
+      \strng{authornamehash}{fef2c75e19c6f121c7dca1c86a9aa9d1}
+      \strng{authorfullhash}{fef2c75e19c6f121c7dca1c86a9aa9d1}
+      \strng{authorfullhashraw}{fef2c75e19c6f121c7dca1c86a9aa9d1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{4}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{month}{1}
+      \field{title}{Turbulent Friction in Rough Pipes and the Energy Spectrum of the Phenomenological Theory}
+      \field{volume}{96}
+      \field{year}{2006}
+      \field{pages}{044502}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.96.044502
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.96.044502
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.96.044502
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
