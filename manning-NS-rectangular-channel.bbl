@@ -19,6 +19,50 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{DINGMAN199713}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=20c0f83017aa57a4d171bab4cf0d6602}{%
+           family={Dingman},
+           familyi={D\bibinitperiod},
+           given={S.Lawrence},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3d1b30896074d0e67bb59940dd1f770f}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Keshav\bibnamedelima P.},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3d660fc3f38611d6fd941f3b012ce}
+      \strng{fullhash}{5bd3d660fc3f38611d6fd941f3b012ce}
+      \strng{fullhashraw}{5bd3d660fc3f38611d6fd941f3b012ce}
+      \strng{bibnamehash}{5bd3d660fc3f38611d6fd941f3b012ce}
+      \strng{authorbibnamehash}{5bd3d660fc3f38611d6fd941f3b012ce}
+      \strng{authornamehash}{5bd3d660fc3f38611d6fd941f3b012ce}
+      \strng{authorfullhash}{5bd3d660fc3f38611d6fd941f3b012ce}
+      \strng{authorfullhashraw}{5bd3d660fc3f38611d6fd941f3b012ce}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Although the Manning equation is widely accepted as the empirical flow law for rough turbulent open-channel flow, using the equation in practical situations such as slope-area computations is fraught with uncertainty because of the difficulty in specifying the value of the reach resistance, Manning's n. Riggs (1976, J. Res. US Geol. Surv., 4: 285–291) found that n was correlated with water-surface slope, and proposed a multiple-regression equation that obviates the need for estimating n in slope-area estimates of discharge. Because his relation was developed from a relatively small sample (N = 62), had potential flaws owing to multicollinearity, and was not thoroughly validated, we used an expanded data base (N = 520) and objective methods to develop a new relation for the same purpose: Q = 1.564A1.173R0.400S−0.0543logS where Q is discharge (m3 s−1), A is cross-sectional area (m2), R is hydraulic radius (m), and S is water-surface slope. We validated Rigg's model and our model using 100 measurements not included in model development and found that both give similar results. Riggs's model is somewhat better in terms of actual (m3 s−1) error, but ours is better in terms of relative (log Q) error. We conclude that either Riggs's or our model can be used in place of Manning's equation in slope-area computations, but that our model is preferable because it has less bias, minimizes multicollinearity, and performs better when applied to discharge changes in individual reaches. We also found that our model performs better than those of Jarrett (1984, J. Hydraul. Eng., 110: 1519–1539) or Riggs in the range of applicability of Jarrett's equation (0.15 m ≤ R ≤ 2.13 m; 0.002 ≤ S ≤ 0.052). Both Riggs's and our models significantly overestimate Q in flows satisfying both the following conditions: Q < 3 m3s−1 and Froude number less than 0.2. For other in-bank flows in relatively straight reaches, our model can be recommended for use in slope-area computations and other applications of the Chézy or Manning equations over a wide range of channel sizes (0.41 m2 ≤ A ≤ 8520 m2) and slopes (0.00001 ≤ S ≤ 0.0418), thus obviating the difficulty of a priori determination of the resistance factor.}
+      \field{issn}{0022-1694}
+      \field{journaltitle}{Journal of Hydrology}
+      \field{number}{1}
+      \field{title}{Statistical development and validation of discharge equations for natural channels}
+      \field{volume}{199}
+      \field{year}{1997}
+      \field{pages}{13\bibrangedash 35}
+      \range{pages}{23}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0022-1694(96)03313-6
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0022169496033136
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0022169496033136
+      \endverb
+    \endentry
     \entry{GioiaPhysRevLett}{article}{}{}
       \name{author}{2}{}{%
         {{hash=10ad12486b78ba5fd0e546badd578eb5}{%

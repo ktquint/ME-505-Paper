@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  2 DEC 2025 14:16
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  2 DEC 2025 14:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -580,31 +580,26 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
+
 File: figures/channel-and-coordinates 1.png Graphic file (type bmp)
 <figures/channel-and-coordinates 1.png>
-
-
 
 
 [2]
 File: figures/boundary-conditions 1.png Graphic file (type bmp)
 <figures/boundary-conditions 1.png>
 
-Overfull \hbox (5.0892pt too wide) detected at line 226
+
+
+Overfull \hbox (5.0892pt too wide) detected at line 234
 [][]\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ) = [] \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 + [] \OML/cmm/m/it/10 A[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U[][]\OT1/cmr/m/n/10 ) [] [] \OML/cmm/m/it/10 ;
  []
-
-
 
 File: figures/3d-profile.png Graphic file (type bmp)
 <figures/3d-profile.png>
 
 
 [3]
-Underfull \hbox (badness 2772) in paragraph at lines 275--281
-\TU/TimesNewRoman(0)/m/n/10 between the Navier-Stokes and Manning’s equations
- []
-
 File: figures/flowrate-agreement.png Graphic file (type bmp)
 <figures/flowrate-agreement.png>
 
@@ -612,8 +607,23 @@ File: figures/flowrate-agreement.png Graphic file (type bmp)
 File: figures/error-analysis-range.png Graphic file (type bmp)
 <figures/error-analysis-range.png>
 
+Underfull \hbox (badness 1117) in paragraph at lines 349--359
+[]\TU/TimesNewRoman(0)/m/n/10 The alpha values minimizing percent error suggest
+ []
+
+
 
 [4]
+Underfull \hbox (badness 3271) in paragraph at lines 361--372
+\TU/TimesNewRoman(0)/m/n/10 Our study compared the performance of Manning’s
+ []
+
+
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 378--378
+\TU/TimesNewRoman(0)/m/n/10 tistical development and validation of discharge
+ []
 
 
 
@@ -629,12 +639,12 @@ Package logreq Info: Writing requests to 'manning-NS-rectangular-channel.run.xml
 
  ) 
 Here is how much of TeX's memory you used:
- 13792 strings out of 473832
- 303302 string characters out of 5729482
- 1258207 words of memory out of 5000000
- 36686 multiletter control sequences out of 15000+600000
+ 13795 strings out of 473832
+ 303445 string characters out of 5729482
+ 1258269 words of memory out of 5000000
+ 36689 multiletter control sequences out of 15000+600000
  563557 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,14n,94p,763b,4787s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,14n,94p,2391b,4791s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on manning-NS-rectangular-channel.xdv (5 pages, 128488 bytes).
+Output written on manning-NS-rectangular-channel.xdv (5 pages, 131448 bytes).
